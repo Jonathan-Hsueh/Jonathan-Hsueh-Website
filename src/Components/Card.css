@@ -1,59 +1,42 @@
-
 .card {
-  width: 100%;
-  /* Remove fixed height to allow variable content length */
-  min-height: 300px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 25px;
-  border: 2px groove rgba(70, 130, 180, 0.8);
-  transition: background-color 0.5s, color 0.5s;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* If you want to hide any overflow */
-}
-
-/* If you want distinct backgrounds for the two halves of the card,
-   you can style them differently. Right now they are flexible containers. */
-.cardBox1,
-.cardBox2 {
-  width: 50%; /* Each half takes up half the card's width */
   display: flex;
   flex-direction: column;
+  border-radius: 20px;
+  border: 2px solid rgba(70, 130, 180, 0.8);
+  transition: background-color 0.5s, color 0.5s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  padding: 20px;
+  background-color: var(--card-bg-color, #ffffff);
+}
+
+.card-large {
+  height: auto; /* Automatically adjusts for two images */
+}
+
+.card-small {
+  height: auto; /* Automatically adjusts for one image */
+}
+
+.cardImageContainer {
+  width: 100%;
+  display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 25px;
-  transition: background-color 0.5s, color 0.5s;
-  padding: 10px; /* Some padding */
+  margin-bottom: 20px;
 }
 
-/* Light/dark styling if you want different background for each box */
-.lightbox1,
-.lightbox2 {
-  background-color: #fafafa;
-}
-
-.darkbox1,
-.darkbox2 {
-  background-color: #333333;
-}
-
-/* Images fill each half. Adjust width/height to preference */
-.image1,
-.image2,
-.image3,
-.image4 {
-  width: 80%;
-  max-height: 200px;
+.cardImage {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 10px;
   object-fit: cover;
-  margin-bottom: 10px; /* Space between images in the same box */
-  cursor: pointer; /* Indicate clickability */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-/* Content (text) styling */
-.content {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 20px;
-  font-weight: 100;
-  margin: 20px; /* Some spacing around the text */
-  text-align: center;
+.cardImage:hover {
+  transform: scale(1.05);
 }

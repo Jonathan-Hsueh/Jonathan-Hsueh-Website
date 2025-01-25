@@ -1,123 +1,106 @@
-
-/* Light/Dark mode body */
+/* General Styles */
 body.lightMode {
-  background-color: #f5f5f5;
-  color: #000000;
-  transition: background-color 0.5s, color 0.5s;
+  background: #f5f5f5;
+  color: #000;
+  transition: all 0.5s ease-in-out;
 }
 
 body.darkMode {
-  background-color: #1e1e1e;
-  color: #ffffff;
-  transition: background-color 0.5s, color 0.5s;
+  background: #121212;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
 }
 
-/* Container for the entire background content */
-.background {
-  width: 100%;
-  /* height: 100px;  Not needed if you want variable height */
-}
-
-/* Header styling */
+/* Header */
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  z-index: 10;
   display: flex;
-  justify-content: space-between; /* Space-between for a left and right section */
+  justify-content: space-between;
   align-items: center;
-  border-radius: 10px;
-  transition: background-color 0.5s, color 0.5s;
-  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08),
-    0 2px 4px 0 rgba(0, 0, 0, 0.12);
-  padding: 0 20px; /* Some horizontal padding */
+  padding: 20px;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #fff;
 }
 
-.lightheader {
-  background-color: #ebeef1;
-  color: #000000;
-  opacity: 100%;
-}
-
-.darkheader {
-  background-color: #2a2a2a;
-  color: #ffffff;
-  opacity: 100%;
-}
-
-/* Header text with gradient fill */
-.headertext {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  background: -webkit-linear-gradient(#ffffff, #000000);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin: 0; /* Remove default paragraph margin */
-}
-
-/* GitHub link/icon in header */
-.github-link {
-  display: inline-block;
-  margin-right: 40px;
+.header-text {
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 .github-icon {
-  width: 30px;
-  height: 30px;
-
-  transition: filter 0.5s;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* In dark mode, optionally invert the GitHub icon if it's a light icon, etc. */
-body.darkMode .github-icon {
-  filter: invert(100%);
+.github-icon:hover {
+  transform: scale(1.1);
 }
 
-/* Container for the main content below header */
-.outerdesign {
-  padding-top: 100px; /* Space below fixed header */
-  width: 100%;
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  color: #333;
 }
 
-/* Cards container */
-.cardcontainer {
-  width: 80%;
-  margin: 0 auto; /* Center the container */
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Space between cards */
-  padding: 40px 0; /* Top and bottom spacing */
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-/* Toggle button container - keep at bottom right or wherever you want */
-.button-container {
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Two cards per row */
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+  max-width: 1200px; /* Optional: Limit the container width */
+  padding: 0 20px; /* Add padding for smaller screens */
+}
+
+
+/* Toggle Button */
+.toggle-container {
   position: fixed;
   bottom: 20px;
   right: 20px;
 }
 
-/* The circular theme toggle button */
-.toggle-circle {
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
+.toggle-button {
+  background: #6a11cb;
+  border: none;
   border-radius: 50%;
-  background-color: rgb(131, 144, 209);
+  width: 60px;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
-/* Icon inside the toggle button */
-.toggle-icon {
-  width: 60%;
-  height: 60%;
-  object-fit: contain;
-  background-color: transparent;
+.toggle-button img {
+  width: 30px;
+  height: 30px;
+}
+
+.toggle-button:hover {
+  transform: scale(1.1);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  background: #333;
+  color: #fff;
 }
