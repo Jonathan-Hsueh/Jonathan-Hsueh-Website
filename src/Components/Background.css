@@ -1,95 +1,123 @@
-body.lightMode {
-    background-color: #f5f5f5;
-    color: #000000;
-    transition: background-color 0.5s, color 0.5s;
-  }
-  
-  body.darkMode {
-    background-color: #1e1e1e;
-    color: #ffffff;
-    transition: background-color 0.5s, color 0.5s;
-  }
 
-.background{
-    width: 100%;
-    height: 100px;
+/* Light/Dark mode body */
+body.lightMode {
+  background-color: #f5f5f5;
+  color: #000000;
+  transition: background-color 0.5s, color 0.5s;
 }
 
+body.darkMode {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Container for the entire background content */
+.background {
+  width: 100%;
+  /* height: 100px;  Not needed if you want variable height */
+}
+
+/* Header styling */
 .header {
-    width: 100%;
-    height: 70px;
-    opacity: 50%;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    transition: background-color 0.5s, color 0.5s;
-    text-shadow: color;
-    
-    position: fixed;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* Space-between for a left and right section */
+  align-items: center;
+  border-radius: 10px;
+  transition: background-color 0.5s, color 0.5s;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.08),
+    0 2px 4px 0 rgba(0, 0, 0, 0.12);
+  padding: 0 20px; /* Some horizontal padding */
 }
 
 .lightheader {
-    background-color: #ebeef1; 
-    opacity: 100%;
-    color: #000000;
+  background-color: #ebeef1;
+  color: #000000;
+  opacity: 100%;
 }
 
 .darkheader {
-    background-color: #2a2a2a; 
-    opacity: 100%;
-    color: #ffffff;
+  background-color: #2a2a2a;
+  color: #ffffff;
+  opacity: 100%;
 }
 
+/* Header text with gradient fill */
 .headertext {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    font-weight: 800;
-    position:relative;
-    top: 0;
-    background: -webkit-linear-gradient(#2ea7e3, #076e5b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  background: -webkit-linear-gradient(#ffffff, #000000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0; /* Remove default paragraph margin */
 }
 
+/* GitHub link/icon in header */
+.github-link {
+  display: inline-block;
+  margin-right: 40px;
+}
+
+.github-icon {
+  width: 30px;
+  height: 30px;
+
+  transition: filter 0.5s;
+}
+
+/* In dark mode, optionally invert the GitHub icon if it's a light icon, etc. */
+body.darkMode .github-icon {
+  filter: invert(100%);
+}
+
+/* Container for the main content below header */
+.outerdesign {
+  padding-top: 100px; /* Space below fixed header */
+  width: 100%;
+}
+
+/* Cards container */
 .cardcontainer {
-    width: 80%;
-    height: 100px;
-    display: flex;
-    flex-direction: column;
-    justify-content: 100px;
+  width: 80%;
+  margin: 0 auto; /* Center the container */
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between cards */
+  padding: 40px 0; /* Top and bottom spacing */
 }
 
+/* Toggle button container - keep at bottom right or wherever you want */
 .button-container {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-  }
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
 
-  .toggle-circle {
-    cursor: pointer;
-    width: 50px; /* Button size */
-    height: 50px; /* Button size */
-    
-    border-radius: 50%; /* Circle shape */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(131, 144, 209); /* Transparent background */
-    overflow: hidden; /* Prevent overflow */
-    padding: 0;
-    left: 0;
-  }
-  
-  /* Icon inside the button */
-  .toggle-icon {
-    width: 60%; /* Full width of the button */
-    height: 60%; /* Full height of the button */
-    object-fit: contain; /* Keeps icon aspect ratio */
-    background-color: transparent; /* Respect transparency */
-  }
+/* The circular theme toggle button */
+.toggle-circle {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(131, 144, 209);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+}
+
+/* Icon inside the toggle button */
+.toggle-icon {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  background-color: transparent;
+}
