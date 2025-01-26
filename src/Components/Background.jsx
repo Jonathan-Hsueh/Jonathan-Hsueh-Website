@@ -42,10 +42,17 @@ const mediaresearchtext =
 
       {/* Hero Section */}
       <section className="hero">
-        <h2>Empowering AI Research for a Safer World</h2>
+        <h2>Empowering AI Research for a More Promissing Future</h2>
         <p>
           Join me in using AI to address real-world challenges and create a
           meaningful impact.
+        </p>
+        <p>
+          I'm passionate about AI, Webdev, and Internet of Things applications 
+          in security, health, and design. 
+        </p>
+        <p>
+          More to come in the future!
         </p>
       </section>
 
