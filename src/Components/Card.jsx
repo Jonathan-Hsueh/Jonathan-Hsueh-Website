@@ -1,8 +1,10 @@
 import './Card.css';
 
 function Card({ content, image1, image2 = null, isDark, link }) {
+  const theme = isDark ? 'dark' : 'light';
+
   return (
-    <div className={`card ${image2 ? 'card-large' : 'card-small'}`}>
+    <div data-theme={theme} className={`card ${image2 ? 'card-large' : 'card-small'}`}>
       {/* Image 1 */}
       <div className={`cardImageContainer ${isDark ? 'darkImage' : 'lightImage'}`}>
         <a href={link} target="_blank" rel="noopener noreferrer">

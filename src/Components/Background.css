@@ -1,13 +1,13 @@
 /* General Styles */
 body.lightMode {
-  background: #f5f5f5;
-  color: #000;
+  background: #f9fafb; /* Light and neutral background */
+  color: #333333; /* Professional dark gray for text */
   transition: all 0.5s ease-in-out;
 }
 
 body.darkMode {
-  background: #121212;
-  color: #fff;
+  background: #1e1e2f; /* Sophisticated dark background */
+  color: #e5e5e5; /* Soft light gray for text */
   transition: all 0.5s ease-in-out;
 }
 
@@ -17,9 +17,10 @@ body.darkMode {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(to right, #6a11cb, #2575fc);
+  background: linear-gradient(to right, #4e79a7, #76b7b2); /* Balanced professional gradient */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #fff;
+  transition: background 0.5s ease-in-out;
 }
 
 .header-text {
@@ -42,8 +43,9 @@ body.darkMode {
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
-  color: #333;
+  background: linear-gradient(135deg, #5a9bd3 0%, #e9eff5 100%); /* Calm and modern gradient */
+  color: #333333; /* Neutral and professional text color */
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
 .hero h2 {
@@ -58,14 +60,13 @@ body.darkMode {
 /* Card Container */
 .card-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Two cards per row */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
   justify-content: center;
   margin: 40px auto;
-  max-width: 1200px; /* Optional: Limit the container width */
-  padding: 0 20px; /* Add padding for smaller screens */
+  max-width: 1200px;
+  padding: 0 20px;
 }
-
 
 /* Toggle Button */
 .toggle-container {
@@ -75,7 +76,7 @@ body.darkMode {
 }
 
 .toggle-button {
-  background: #6a11cb;
+  background: linear-gradient(to bottom, #4e79a7, #76b7b2); /* Subtle and professional gradient */
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -84,7 +85,7 @@ body.darkMode {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  transition: transform 0.2s;
+  transition: transform 0.2s, background 0.5s ease-in-out;
 }
 
 .toggle-button img {
@@ -101,6 +102,7 @@ body.darkMode {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  background: #333;
-  color: #fff;
+  background: #4e79a7; /* Professional and energetic color */
+  color: #ffffff;
+  transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
