@@ -1,23 +1,23 @@
-/* General Styles */
+
 body.lightMode {
-  background: #f9fafb; /* Light and neutral background */
-  color: #333333; /* Professional dark gray for text */
+  background: #f9fafb; 
+  color: #333333; 
   transition: all 0.5s ease-in-out;
 }
 
 body.darkMode {
-  background: #1e1e2f; /* Sophisticated dark background */
-  color: #e5e5e5; /* Soft light gray for text */
+  background: #1e1e2f; 
+  color: #e5e5e5; 
   transition: all 0.5s ease-in-out;
 }
 
-/* Header */
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(to right, #4e79a7, #76b7b2); /* Balanced professional gradient */
+  background: linear-gradient(to right, #4e79a7, #76b7b2); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   color: #fff;
   transition: background 0.5s ease-in-out;
@@ -39,12 +39,11 @@ body.darkMode {
   transform: scale(1.1);
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #5a9bd3 0%, #e9eff5 100%); /* Calm and modern gradient */
-  color: #333333; /* Neutral and professional text color */
+  background: linear-gradient(135deg, #5a9bd3 0%, #e9eff5 100%); 
+  color: #333333; 
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
 
@@ -76,7 +75,7 @@ body.darkMode {
 }
 
 .toggle-button {
-  background: linear-gradient(to bottom, #4e79a7, #76b7b2); /* Subtle and professional gradient */
+  background: linear-gradient(to bottom, #4e79a7, #76b7b2); 
   border: none;
   border-radius: 50%;
   width: 60px;
@@ -102,7 +101,7 @@ body.darkMode {
   text-align: center;
   padding: 20px;
   font-size: 0.9rem;
-  background: #4e79a7; /* Professional and energetic color */
+  background: #4e79a7; 
   color: #ffffff;
   transition: background 0.5s ease-in-out, color 0.5s ease-in-out;
 }
