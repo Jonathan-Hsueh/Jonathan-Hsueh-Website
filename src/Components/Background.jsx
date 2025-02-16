@@ -42,7 +42,7 @@ function Background() {
     <div className={`background ${isDark ? "dark" : "light"}`}>
       
       <header className="header">
-        <h1 className="header-text">Jonathan Hsueh's Website</h1>
+        <h1 className="header-text">Jonathan Hsueh</h1>
         <a
           href="https://github.com/Jonathan-Hsueh"
           target="_blank"
