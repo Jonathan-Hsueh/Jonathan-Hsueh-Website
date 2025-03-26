@@ -1,6 +1,12 @@
 import { useState } from "react";
 import "./Background.css";
 /*Research Images*/
+import globalmedia1 from "../../images/globalmediaimg1.png";
+import globalmedia2 from "../../images/globalmediaimg2.png";
+import centrova1 from "../../images/centrovaimg1.png";
+import centrova2 from "../../images/centrovaimg2.png";
+import godseye1 from "../../images/godseyeimg1.png";
+import godseye2 from "../../images/godseyeimg2.png";
 import painresearch1 from "../../images/painresearch1.png";
 import painresearch2 from "../../images/painresearch2.png";
 import mediaresearch1 from "../../images/mediaresearch1.png";
@@ -9,6 +15,8 @@ import gunresearch1 from "../../images/gunresearch1.png";
 import gunresearch2 from "../../images/gunresearch2.png";
 import skinresearch1 from "../../images/skinresearch1.png"
 import skinresearch2 from "../../images/skinresearch2.png"
+import godseyewebsite1 from "../../images/godseyewebsite1.png"
+import godseyewebsite2 from "../../images/godseyewebsite2.png"
 
 /*Other Icons*/
 import lightModeIcon from "../../images/mode-light-icon.png";
@@ -23,13 +31,25 @@ function Background() {
       "Published \"Social Media Psychological Impacts across Race and Gender\" on the Research Archive of Rising Scholars with 50+ downloads. Analyzed how social media affects mental health across race and gender, highlighting issues like insomnia, distress, and suicidal behaviors, while identifying positive impacts like video calling and supportive communities. Submitted findings to the Polygence Symposium, contributing to academic discussions and receiving feedback from professors."
   ;
   const gunresearchtext = 
-      "\"Construction of a YOLOv8 surveillance system using gun detection to prevent Mass Shootings.\" Trained 5 industry leading open-source detection models on datasets of over 10000, achieve results of 98.2% mAP. Created a hosting-streaming system and working on an open-source website with an Integrated AI Backend. Thank you!"
+      "\"Construction of a YOLOv8 surveillance system using gun detection to prevent Mass Shootings.\" Trained 5 industry leading open-source detection models on datasets of over 10000, achieve results of 98.2% mAP. Created a hosting-streaming system and working on an open-source website with an Integrated AI python frontend. This link is strictly for the research paper which is currently being published."
   ;
   const skinresearchtext = 
-      "\"OpenCV and Tensorflow for the Construction of a YOLOv11 Skin Cancer Detection System with Transfer Learning.\" Utilizing ultralytics YOLO models, specifically versions 11, I employed transfer learning on models totalling 14000 images to train and enhance skin cancer imaging. Traditional high-quality datasets with large volume are difficult to find, so transfer learning is a great option. Planning on collaborating with skin doctors from Taichung Rong Zong Hospital in the future!"
+      "\"OpenCV and Tensorflow for the Construction of a YOLOv11 Skin Cancer Detection System with Transfer Learning.\" Utilizing ultralytics YOLO models, specifically versions 11, I employed transfer learning on models totalling 14000 images to train and enhance skin cancer imaging. Using transfer learning for model training and gathering data from Taichung Rong Zong Hospital."
   ;
-    const link1 = "https://research-archive.org/index.php/rars/preprint/view/1162";
+  const godseyewebsitetext = 
+      "Written in Python with a Streamlit framework, this website allows for seamless security detection. The intuitive UI sends image data directly to a trainined YOLO model, which sends processed footage to the website. It has image and video uploading, webcam, and RTMP streamling link detection capabilities, and it automatically calculates latency and FPS benchmark metrics. "
+  ;
+  const globalmediatext = 
+      "A website that presents a holistic viewpoint of public social media sentiment about US executive actions. Data analysis powered by few-shot prompting, data scraping, and sentiment analysis. Website written in TSX and tailwind, using keyframes, APIs, and ChartJS. Won first place at UCSB Datathon 2025 in the Natural Language Processing track."
+  ;
+  const centrovatext = 
+      "Centrova is a startup that uses an AI wrapper to match patients to relevant medical trials, and I work as a frontend engineer on the patient selection page. I've designed an intuitive file upload modal with hotkey systems and bug fixes, and I'm working on a Python data scraper to summarize patient data."
+  ;
+  const link1 = "https://research-archive.org/index.php/rars/preprint/view/1162";
   const link2 = "https://research-archive.org/index.php/rars/preprint/view/1161";
+  const linkgm = "https://globalmediatracker.vercel.app/home";
+  const linkge = "https://github.com/Jonathan-Hsueh/gods-eye";
+  const linkct = "https://d2cfj455yy12x6.cloudfront.net/";
 
   const [isDark, setIsDark] = useState(true);
 
@@ -65,11 +85,36 @@ function Background() {
 
       <main className="card-container">
         <Card
+        image1={globalmedia1}
+        image2={globalmedia2}
+        content={globalmediatext}
+        link={linkgm}
+        isDark={isDark}
+        />
+
+        <Card
+        image1={godseye1}
+        image2={godseye2}
+        content={godseyewebsitetext}
+        link={linkge}
+        isDark={isDark}
+        />
+
+        <Card
+        image1={centrova1}
+        image2={centrova2}
+        content={centrovatext}
+        link={linkct}
+        isDark={isDark}
+        />
+    
+        <Card
         image1={gunresearch1}
         image2={gunresearch2}
         content={gunresearchtext}
         isDark={isDark}
         />
+
         <Card
           image1={painresearch1}
           image2={painresearch2}
